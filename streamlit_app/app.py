@@ -742,6 +742,22 @@ def main():
     # Page routing
     if st.session_state.page == "📊 Dashboard":
         st.title("Incident Dashboard")
+        st.markdown("""
+            <div style='
+                text-align: center; 
+                color:#333333; ; 
+                margin: 10px 0 25px 0; 
+                padding: 15px; 
+                background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+                border-radius: 10px; 
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-weight: 600;
+                letter-spacing: 0.5px;
+            '>
+                🚨 Incident Management Dashboard
+            </div>
+        """, unsafe_allow_html=True)
         st.write("📊 Dashboard view active")
         st.json({"Total Incidents": len(incidents), "Filtered Incidents": len(filtered_incidents)})
         
